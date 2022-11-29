@@ -80,9 +80,6 @@ class ECPoint:
         y_r = -(point.y + m * (x_r - point.x)) % curve.p
 
         if not ECPoint.IsOnCurveCheck(Point(x_r, y_r), curve):
-            return (Point(None, None))
-        
-        if not ECPoint.IsOnCurveCheck(Point(x_r, y_r), curve):
             return None
         return Point(x_r, y_r)
 
